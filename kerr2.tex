@@ -1,0 +1,58 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{czech}
+\usepackage[utf8]{inputenc}
+\usepackage{a4wide}
+\usepackage[dvipdfm]{graphicx}
+\usepackage{graphics}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epsfig}
+
+%%\usepackage{nopageno}
+%%\usepackage{txfonts}
+\usepackage[usenames]{color}
+
+\begin{document}
+\section{Zařízení}
+\subsection{Monochromátor}
+Nová aparatrura obsahuje monochromátor TRIAX 550. Jedná se o mřížkový monochromátor s možností volby z různých mřížek. V našem případě máme na výběr 600, 900 a 1200 vrypů na mm. Parametry těchto mřížek jsou uvedeny v tabulce (\ref{TTriax}). Tento monochromátor lze ovládat za pomoci rozhraní GPIB. 
+\begin{table}
+$$
+\begin{array}{|c|c|c|}
+\hline
+\mbox{grating} [g/mm]&  \mbox{Disperze} [nm/mm]&    \mbox{Spektrální rozsah} [nm] \\ \hline
+600&    2.83&   0 - 3000 \\ \hline
+900&    1.84&   0 - 2000 \\ \hline
+1200&   1.34&   0 - 1500 \\ \hline
+\end{array}
+$$
+\caption{Parametry mřížek monochromátoru}
+\label{TTriax}
+\end{table}
+
+\subsection{Multimeter}
+K Určení velikosti signálu na fotonásobiči používáme mulimetr Keithley 2001. V našem případě v měříme napětí na rozsahu 1 V. Možnost automatického rozsahu nepoužíváme, protože při přepnutí rozsahu dochází ke skokům napětí. Komunikace je opět zprostředkována rozhraním GPIB.
+
+%TODO Samý kidy, vymysli co napsat!!!
+\subsection{Zroj}
+Jako zroj elektrického proudu pro magnet používáme zdroj stejnosměrbého proudu Kepco BOP. Tento zdroj
+
+
+\section{Ovládací program Kerr2}
+Dále se budu zabývat ovladacím programem pro druhý z experimentů uvedených výše. 
+
+\subsection{Nastavení experimentu}
+Tento program má hned několik funkcí, které usnadňují nastavení experimetnu. První z nich umožňuje manuální nastavení proudu magnetem. Uživatel zadá požadovaný proud a program pomalu zvyšuje proud, dokud nedosáhne požadované hodnoty. Dálší mód nastaví monochromátor na požadovanou vlnovou délku a otevře štěrbiny. Toho se používá především pro nastavení prvků v experimentu.
+
+\subsection{Měření spektra}
+Program umožňuje proměření spektra ve zvoleném rozahu s libovolným krokem. Dále umožňuje nastavení tolerance chyby měření, čekací doby po změňe magnetizace, počet měření jednotlivé vlnové délky a kalibračních koeficientů pro výpočet energie signálu. Po zahájení měření program nejprce nastaví na monochromátoru měřenou vlnovou délku a zapne proud do magnetu. Proud je přidáván postupně kvůli možnému zkratu na zroji při rychlém přepólování. Každé spektrum se měří opakovaně dle zadání uživatele, přičemž v celém prlběhu měření je kontrolováno, zda nebyl překročen rozsah. V takovém případě se měření pozastaví, aby umožnilo manuální otočení polarizátoru a měření pokračuje znovu od poslední vlnové délky. Měření opět porbíhá i pro opačnou magnetizaci, přičemž program umožňuje zadání počtu otáček potřebných pro navrácení do rozsahu po změně polarizace. Nakonec je pro danou vlnovou délku provedeno třetí měření s původní magnetizací a je zkontrolována odchylka od prvního měření. V případě příliš velké odchylky se měření opakuje. V průběhu celého měření je vykreslován graf, ze kterého je možné již při měření odhalit případné nespojitosti. Po skončení měření jsou data uložena do expterního souboru spolu se všemi parametry měření.
+
+\subsection{Hysterzní smyčky}
+Program dále umožňuje měření hysterzních smyček a to dvěma způsoby. První postupně proměří při zadané vlnové délce různé hodnoty proudu, přičemž postupuje od zadané hodnoty I do -I s krokem, který je rovněž zadán. Následně se stejným krokem vrátí do hodnoty I. V průběhu měření je opět kreslen graf.
+
+Druhá metoda nese anglický název four loop. Spočívá v postupném proměření hodnot vzdálených o $\Delta$I od hodnoty proudu I resp -I, přičemž tato vzálenost roste se zadaným krokem. Prlběh proudu je znázorněn na obrázku (\ref{4-loop}). Podstatné je, že vždy dojde do hodnoty I resp. -I.
+
+\end{document}

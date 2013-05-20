@@ -1,0 +1,49 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{czech}
+\usepackage[utf8]{inputenc}
+\usepackage{a4wide}
+\usepackage[dvipdfm]{graphicx}
+\usepackage{graphics}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epsfig}
+
+%%\usepackage{nopageno}
+%%\usepackage{txfonts}
+\usepackage[usenames]{color}
+
+\begin{document}
+\section{Experiment s rotujícím polarizátorem}
+Dříve jsme se zabývali teoretickým popisem magnetooptického experimentu, který využívá závislost intenzity na úhlu, který svírá polarizátor se svislou osou. Nyní se budeme zabývat konkrétní realizací.
+\subsection{Světelný zdroj}
+Jako zdroj světla používáme heliovou a deuteriovou trubici. Obě najedou pokrývají spektrální rozsah od 250 nm do 1000 nm. Náš zdroj umožňuje použití obou trubic zároveň, avšah heliová trubice vytváří světlo o přibližně pětkrát větší intenzitě. Pokud chceme provést měření celého spektra najednou, musíme odfiltrovat oblast okolo 800 nm, jinak by došlo k přesycení spektrometru dříve, než bychom dosáhli dostatečného signálu ve zbytku spektra.
+
+\subsection{Polarizátory}
+V experimentu používáme standartní (DOPLN PRVEK) polarizítoru, které jsou umístěny do držáků s krokovými motorky.  Ty umožňují nastavení úhlu s přesností až $10^{-3}\ ^o$. Jejich ovládání je zprostředkováno kontrolní jednotkou DC 500 od společnosti Owis. Ta umožňuje jejich manuální ovládání i kontrolu přes rozhraní GPIB.
+
+\subsection{Magnet}
+Máme hezký chalzený magnet s držákem na vzorek.
+
+\subsection{Spektrometr}
+K analýze světla používáme CCD spektrometr USB2000+ od Ocean Optics. Tento spektrometr umožňuje měření celého spektra najednou. Jeho schéma naleznete na obrázku (\ref{USB2000+ schema}). CCD čip uvnitř měří na 2048 pixelech, což v kombinaci s přesností kalibrační křivky umožňuje určení vlnové délky s přesností x.xx nm. Komunikace se spektrometrem je zprostředkována přes rozhraní USB protokolem VISA. Spektrometr podporuje pouze základní bitovou komunikaci, ale ta postačuje k nastavení potřebných atributů, jako je integrační doba.
+
+\subsection{Ovládací program}
+Samotné měření se dá rozdělit do dvou částí. První je nastavení aparatury a druhá samotné měření. Toto rozdělení respektuje i ovládací prgram.
+\subsubsection{Nastavení aparatury}
+Nejprve je potřeba nastavit první polarizátor tak abychom získali p-polarizované světlo. Proto za něj umístíme sklíčko tak jak je ukázáno na obrázku (\ref{TPE install}). Díky odrazu pod Brewsterovým úhlem stačí hledat minimum signálu. Pro nastavení sis tačí vybrat jednu vlnovou dálku, která je v našem případě reprezentována pixelem číslo 808, kde je přibližně maximum heliové trubice. Nyní následuje krátká kapitolka popisující proceduru hledání minima.
+
+\subsubsection{Minseeker}
+Celá procedura je založena na znalosti toho, že námi vyšetřovaná závislost má pouze jedno minimum a je konvexní na okolí hrubého kroku, který bude použit dále.
+
+Nejprve provedeme hrubé proměření celé závislosti. V průběhu proměření si držíme pozici nejnižší hodnoty a nižší z okolních hodnot. Jakmile známe hrubý interval, na kterém se minimum nachází nachází, můžeme přistoupit k rekurentnímu dohledání. Vzhledem k nutnosti malé přesnosti a mělkosti minima jsem zvolil ne příliš efektvní ale dostatečně rychlý algoritmus. Tento algoritmus postupně půlí interval a volí směr posunu v závislosti na porovnání hodnot na krajích intervalu, dokud nedosáhnemé kýžené přesnosti.
+
+%\hline
+
+Následně nastavíme aparaturu do uspořádání pro měření. Dále potřebujeme nastavit fruhý polarizátor. Mohli bychom opakovat postup hledání minima u prvního z polarizátorů, ale vzhledem k lepší ostrosti maxima, používáme anologický alogritmus pro hledání maxima a následně polarizátor otočíme o 90 stupňů, čímž docílíme výrazně lepšího zkřížení.
+
+\subsection{Měření}
+Na začátku měření program vyžaduje pouze zadání rozsahu a kroku, ve kterém má měřit a četnost měření spekter. Zbytek již obstará sám. Nejprve proběhne měření při první magnetizaci, následně při magnetizaci opačné. Obě části jsou dále vyhodnocovány vlášť a až výsledky se zprůměrují. Po měření se nejprve data přeuspořádají, abychom získali závislost intenzity na úhlu polarizátoru pro jednotlivé vlnové délky. Z každé z nich nalezneme maximum ze kterého určíme normovací konstantu. Dále metodou njmenších čtverců stanovíme buď Kerrovu rotaci, nebo elipticitu v závislosti na přítomnosti fázpvých destiček, a to porovnáním s teoretickou závislostí uvedenou výše. Nakonec jsou výsledná data uloženy do externího souboru.
+\end{document}
