@@ -2,7 +2,7 @@
 
 \section{Metoda téměř zkřížených polarizátorů}
 \subsection{Teorie}
-Toto experimentální uspořádání umožňuje rychlé určení Kerrovy rotace a elipsity pro celé spektrum. V našem případě používáme CCD spektometr v kombinaci se širokospektrálním zrojem, který se skládá z halogenové a deuteriové výbojky. To umožňuje proměření celého spektra najednou. Schéma celého experimentu je zobrazeno na obrázku (\ref{Schéma rotující polarizátor}). Ze zdroje je světlo vedeno optickým vláknem do aparatury. Svazek je nejprve kolimován spojnou čočkou. Následně prochází polarizátorem, který je otočen o úhel $\alpha$ od svislé osy a fázovou destičkou s fázovým posuvem $\delta$. Po odrazu na vzorku prochází světlo analyzátorem, který je natočený o úhel $\pi/2$ od svilé osy. Výstupní světlo je zachyceno sběrnou čočkou do optického vlákna, které vede do spektrometru. Za pomoci Jonesova formalizmu můžeme spočítat Jonesův vektor světla dopadajícího na detektor.
+Toto experimentální uspořádání umožňuje rychlé určení Kerrovy rotace a elipsity pro celé spektrum. V našem případě používáme CCD spektometr v kombinaci se širokospektrálním zrojem, který se skládá z halogenové a deuteriové výbojky. To umožňuje proměření celého spektra najednou. Schéma celého experimentu je zobrazeno na obrázku (\ref{Schema TPE}). Ze zdroje je světlo vedeno optickým vláknem do aparatury. Svazek je nejprve kolimován spojnou čočkou. Následně prochází polarizátorem, který je otočen o úhel $\alpha$ od svislé osy a fázovou destičkou s fázovým posuvem $\delta$. Po odrazu na vzorku prochází světlo analyzátorem, který je natočený o úhel $\pi/2$ od svilé osy. Výstupní světlo je zachyceno sběrnou čočkou do optického vlákna, které vede do spektrometru. Za pomoci Jonesova formalizmu můžeme spočítat Jonesův vektor světla dopadajícího na detektor.
 \begin{eqnarray}
 J=r\begin{bmatrix}0&0\\0&1\end{bmatrix}\begin{bmatrix}1&-\Theta_K\\-\Theta_K&-1\end{bmatrix}\begin{bmatrix}e^{i\frac{\delta}{2}}&0\\0&e^{-i\frac{\delta}{2}}\end{bmatrix}\begin{bmatrix}\cos\alpha\\\sin\alpha\end{bmatrix}\\
 =r\begin{bmatrix}0\\-\Theta_Ke^{i\frac{\delta}{2}}\cos\alpha+e^{-i\frac{\delta}{2}}\sin\alpha\end{bmatrix},
@@ -28,6 +28,12 @@ V  případě, že $\delta=0$, tedy odebereme fázovou destičku, nám zcela vym
 
 Tato závislost předpokádá přesné určení vzájemné polohy polarizátorů. Tu však v praxi neznáme a proto využíváme toho, že platí $\theta_K(M)=-\theta_K(-M)$. kde $M$ značí magnetizaci. Měříme tedy závislosti pro dva opačné proudy procházející magnetem a výsledné nafitované konstanty od sebe odečteme a vydělíme dvěmi.
 
+\begin{figure}
+    %TODO přidat obrázek
+    \caption{Schéma metody téměř zkřížených polarizátorů.}
+    \label{Schema TPE}
+\end{figure}
+
 \subsection{Použitá zařízení}
 Fotografii celé aparatury můžete vidět na obrázku (\ref{TPE photo}).
 
@@ -40,19 +46,28 @@ Fotografii celé aparatury můžete vidět na obrázku (\ref{TPE photo}).
 \end{figure}
 
 Jako zdroj světla používáme lampu typ XXX od Ocean Optics. Obě najedou pokrývají spektrální rozsah od 250 nm do 1000 nm. Náš zdroj umožňuje použití obou trubic zároveň, avšak heliová trubice vytváří světlo o přibližně pětkrát větší intenzitě. Z toho důvodu je v oblasti malých vlnových délek znatelně vyšší šum. Dostatečná doba integrace signálu však tento šum téměř zcela vyruší.
+% lampa DH-2000-BAL OO
 
 Polarizátory z CaF a křemene typu Rochon jsou umístěny do držáků s krokovými motorky.  Ty umožňují nastavení úhlu s přesností až $10^{-3}$ stupně. Jejich ovládání je zprostředkováno kontrolní jednotkou DC 500 od společnosti Owis. Ta umožňuje jejich manuální ovládání i kontrolu přes rozhraní GPIB.
 
 V našem uspořádání vytváří magnet polární magnetické pole. Aby nedocházelo ke zahřívání vzorku, je celý magnet chlazený studenou vodou. Při proudu 2 A vytváří magnet pole okolo 0.4 T, které bylo dostatečné k nasycení měřených vzorků. %TODO Hysterzní smyška
 
-K analýze světla používáme CCD spektrometr USB2000+ od Ocean Optics. Jeho schéma naleznete na obrázku (\ref{USB2000+ schema}). Rozsah spektrometru je přibližně od 200 do 900 nm s rozlišovací schopností (doplň číslo). Komunikace se spektrometrem je zprostředkována přes rozhraní USB protokolem VISA. 
+K analýze světla používáme CCD spektrometr USB2000+ od Ocean Optics. Jeho schéma naleznete na obrázku (\ref{USB2000+ schema}), přičemž opis jednotlivých komponent naleznete v \cite{USB2000}. Rozsah spektrometru je přibližně od 200 do 900 nm s rozlišovací schopností (doplň číslo). Komunikace se spektrometrem je zprostředkována přes rozhraní USB protokolem VISA. 
+
+\begin{figure}
+    \begin{center}
+    \includegraphics{img/usb4openbench.eps}
+    \end{center}
+    \caption{Schéma sektrometru USB2000+}
+    \label{USB2000+ schema}
+\end{figure}
 
 \subsection{Průběh měření}
 Samotné měření se dá rozdělit do dvou částí. První je nastavení aparatury a druhá samotné měření. Toto rozdělení respektuje i ovládací program.
 \subsubsection{Nastavení aparatury}
 Po upevnění vzorku je nejprve třeba navést světelný svazek do vlákna spektrometru. Ač je na jeho začátku sběrná čočka, je třeba velmi jemného nastavení za pomoci aretačních šroubů, protože natočení této čočky má velký vliv na měřenou intenzitu.
 
-Následně je potřeba nastavit první polarizátor tak abychom získali p-polarizované světlo. Proto za něj umístíme sklíčko tak jak je ukázáno na obrázku (\ref{TPE install}). Úhel odrazu od sklíčka odpovídá Brewsterově úhlu, z čehož vyplývá, že při nastavení polarizátoru na p-polarizaci detekujeme minimální intenzitu světla. To platí nezávisle na vlnové délce, proto je nejvhodnější vyhodnocovat pouze neiintenzivnější část spektra. Minimum nalezneme tak, že proskenujeme různé úhly natočení polarizátoru a následně zhustšujeme měření v oblasti minima, dokud nedosáhneme požadované přesnosti.
+Následně je potřeba nastavit první polarizátor tak abychom získali p-polarizované světlo. Proto za něj umístíme sklíčko tak, aby úhel odrazu do detektoru odpovídal Brewsterově úhlu. Díky tomu pro nastavení polarizátoru na p-polarizaci detekujeme minimální intenzitu světla. To platí nezávisle na vlnové délce, proto je nejvhodnější vyhodnocovat pouze neiintenzivnější část spektra. Minimum nalezneme tak, že proskenujeme různé úhly natočení polarizátoru a následně zhustšujeme měření v oblasti minima, dokud nedosáhneme požadované přesnosti.
 
 Druhý polarizátor je nutné pouze zkřížit, aby měřené závislosti byli co nejsymetričtější, což usnadňuje fitování. Toho docílíme podobně jako u prvního, protože se opět jedná o hledání minima signálu při nulovém magnetickém poli.
 
@@ -106,7 +121,7 @@ J=\begin{bmatrix}0&0\\0&1\end{bmatrix}
 \begin{bmatrix}\sin\alpha\\\cos\alpha\end{bmatrix} \\
 =\begin{bmatrix}0\\\cos\eta(r_{ps}e^{i\frac{\delta}{2}}\cos\tau+r_{pp}e^{-i\frac{\delta}{2}}\sin\tau)& -\sin\eta(r_{ps}e^{i\frac{\delta}{2}}\sin\tau-t_{pp}e^{-i\frac{\delta}{2}}\cos\tau)\end{bmatrix};\\ \tau = \beta_0\sin\omega_mt
 \end{eqnarray}
-Po další úpravách, které jsou podrobněji rozebrány například v \ref{Nyvlt} získáme vztah pro intenzitu
+Po další úpravách, které jsou podrobněji rozebrány například v \cite{Nyvlt} získáme vztah pro intenzitu
 \begin{eqnarray}
 I\approx\frac{1}{2}\left[|r_{ps}|^2+|r_{pp}|^2(\eta+\tau)+(r_{ps}r^*_{pp}e^{i\delta})^2+r^*_{ps}r_{pp}e^{-i\delta})(\eta+\tau)\right]
 \end{eqnarray}
@@ -116,7 +131,11 @@ I_{\omega_m}\approx|r_{pp}|^2\left[\eta+\mbox{Re}\left(\frac{r_{ps}}{r_{pp}}e^{i
 \end{eqnarray}
 X %TODO Zmínit, že se využívá synchronní detekce - detekuje se pouze oscilující složka na frekvenci omega_m
 
-
+\begin{figure}
+    %TODO Přidat obrázek
+    \caption{Schéma modulační metody}
+    \label{Schema modul}
+\end{figure}
 
 \section{Zařízení}
 Nová aparatrura obsahuje monochromátor TRIAX 550. Jedná se o mřížkový monochromátor s možností volby z různých mřížek. V našem případě máme na výběr 600, 900 a 1200 vrypů na mm. Parametry těchto mřížek jsou uvedeny v tabulce (\ref{TTriax}). Tento monochromátor lze ovládat za pomoci rozhraní GPIB. 
@@ -140,15 +159,13 @@ Jako zroj elektrického proudu pro magnet používáme zdroj stejnosměrbého pr
 
 \section{Ovládací program Kerr2}
 V rámci náplně této práce byl zcela přeprogramován ovládaví program kvůli novým komponentám.
-%TODO zkrátit popis. + obrázek
+%TODO zkrátit popis. (možná ještě trochu) + obrázek
 
 \subsection{Nastavení experimentu}
-Tento program má hned několik funkcí, které usnadňují nastavení experimetnu. První z nich umožňuje manuální nastavení proudu magnetem. Uživatel zadá požadovaný proud a program pomalu zvyšuje proud, dokud nedosáhne požadované hodnoty. Dálší mód nastaví monochromátor na požadovanou vlnovou délku a otevře štěrbiny. Toho se používá především pro nastavení prvků v experimentu.
+Tento program má několik funkcí, které usnadňují nastavení experimetnu. Konkrétně umožňuje manuální kontrolu magnetu a monochromátoru s tím, že má přednastavených několik užitečných nastavení pro nastavování experimentu.
 
 \subsection{Měření spektra}
-Program umožňuje proměření spektra ve zvoleném rozahu s libovolným krokem. Dále umožňuje nastavení tolerance chyby měření, čekací doby po změňe magnetizace, počet měření jednotlivé vlnové délky a kalibračních koeficientů pro výpočet energie signálu. Po zahájení měření program nejprve nastaví na monochromátoru měřenou vlnovou délku a zapne proud do magnetu. Proud je přidáván postupně kvůli možnému zkratu na zroji při rychlém přepólování. Každé spektrum se měří opakovaně dle zadání uživatele, přičemž v celém prlběhu měření je kontrolováno, zda nebyl překročen rozsah. V takovém případě se měření pozastaví, aby umožnilo manuální otočení polarizátoru a měření pokračuje znovu od poslední vlnové délky. Měření opět probíhá i pro opačnou magnetizaci, přičemž program umožňuje zadání počtu otáček potřebných pro navrácení do rozsahu po změně polarizace. Nakonec je pro danou vlnovou délku provedeno třetí měření s původní magnetizací a je zkontrolována odchylka od prvního měření. V případě příliš velké odchylky se měření opakuje. V průběhu celého měření je vykreslován graf, ze kterého je možné již při měření odhalit případné nespojitosti. Po skončení měření jsou data uložena do expterního souboru spolu se všemi parametry měření.
+Program umožňuje proměření spektra ve zvoleném rozahu s libovolným krokem. Dále umožňuje nastavení tolerance chyby měření, čekací doby po přepólování magnetu, počet měření jednotlivé vlnové délky a kalibračních koeficientů pro výpočet energie signálu. Po zahájení měření program nejprve nastaví na monochromátoru měřenou vlnovou délku a zapne proud do magnetu. Proud je přidáván postupně kvůli možnému zkratu na zroji při rychlém přepólování. Každé spektrum se měří opakovaně dle zadání uživatele, přičemž v celém prlběhu měření je kontrolováno, zda nebyl překročen rozsah. V takovém případě se měření pozastaví, aby umožnilo manuální otočení polarizátoru a měření pokračuje znovu od poslední vlnové délky. Měření stejně probíhá i pro opačnou magnetizaci, přičemž program umožňuje zadání počtu otáček potřebných pro navrácení do rozsahu po změně polarizace. Nakonec je pro danou vlnovou délku provedeno třetí měření s původní magnetizací a je zkontrolována odchylka od prvního měření. V případě příliš velké odchylky se měření opakuje. Po skončení měření jsou data uložena do expterního souboru spolu se všemi parametry měření.
 
 \subsection{Hysterzní smyčky}
-Program dále umožňuje měření hysterzních smyček a to dvěma způsoby. První postupně proměří při zadané vlnové délce různé hodnoty proudu, přičemž postupuje od zadané hodnoty I do -I s krokem, který je rovněž zadán. Následně se stejným krokem vrátí do hodnoty I. V průběhu měření je opět kreslen graf.
-
-Druhá metoda nese anglický název four loop. Spočívá v postupném proměření hodnot vzdálených o $\Delta$I od hodnoty proudu I resp -I, přičemž tato vzálenost roste se zadaným krokem. Prlběh proudu je znázorněn na obrázku (\ref{4-loop}). Podstatné je, že vždy dojde do hodnoty I resp. -I.
+Program dále umožňuje měření hysterzních smyček a to dvěma způsoby. První postupně proměří při zadané vlnové délce ekvidistantě různé hodnoty proudu od I po -I a zpět. Druhá metoda, tzv. four loop, spočívá v postupném proměření hodnot vzdálených o $\Delta$I od hodnoty proudu I resp -I, přičemž tato vzálenost roste se zadaným krokem. V průběhu měření je postupně vykreslován graf.

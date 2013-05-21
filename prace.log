@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=cslatex 2012.10.29)  21 MAY 2013 00:08
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=cslatex 2012.10.10)  21 MAY 2013 15:21
 entering extended mode
  %&-line parsing enabled.
 **prace.tex
@@ -296,11 +296,7 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 \f@ncyO@olf=\skip53
 \f@ncyO@orf=\skip54
 )
-(/usr/share/texmf-texlive/tex/latex/setspace/setspace.sty
-Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
-
-Package: `setspace' 6.7 <2000/12/01>
-) (/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip55
 
@@ -501,15 +497,8 @@ File: pdfmark.def 2009/10/09 v6.79a Hyperref definitions for pdfmark specials
 \pdf@defaulttoks=\toks33
 \Fld@listcount=\count106
 )) (./prace.aux
-(./uvod.aux) (./polarizace.aux
-
-LaTeX Warning: Label `Ex' multiply defined.
-
-
-LaTeX Warning: Label `Ey' multiply defined.
-
-) (./anizotrop.aux) (./expmetody.aux) (./vzorky.aux) (./vysledky.aux)
-(./zaver.aux) (./literatura.aux))
+(./uvod.aux) (./polarizace.aux) (./anizotrop.aux) (./expmetody.aux)
+(./vzorky.aux) (./vysledky.aux) (./zaver.aux) (./literatura.aux))
 \openout1 = `prace.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
@@ -583,21 +572,28 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 ]
 \openout2 = `uvod.aux'.
 
- (./uvod.tex) [2
+ (./uvod.tex
+File: img/polar.eps Graphic file (type eps)
+ <img/polar.eps>
+Overfull \hbox (20.0513pt too wide) in paragraph at lines 10--11
+[][] 
+ []
+
+) [2
 
 
-]
+] [3]
 \openout2 = `polarizace.aux'.
 
  (./polarizace.tex
 Kapitola 1.
-[3
+[4
 
 
 
 ]
 File: img/polarelip.eps Graphic file (type eps)
- <img/polarelip.eps> [4]
+ <img/polarelip.eps> [5]
 
 LaTeX Warning: Command \' invalid in math mode on input line 56.
 
@@ -626,60 +622,47 @@ LaTeX Warning: Command \' invalid in math mode on input line 57.
 Missing character: There is no á in font cmmi12!
 Missing character: There is no ý in font cmmi12!
 Missing character: There is no í in font cmmi12!
-[5]
-
-LaTeX Warning: Citation `Lingebra' on page 6 undefined on input line 97.
-
-
+[6]
 Overfull \hbox (22.05833pt too wide) in paragraph at lines 104--106
 \IL2/cmr/m/n/12 kde $\OML/cmm/m/it/12 s$ \IL2/cmr/m/n/12 re-spek-ti-ve $\OML/cm
 m/m/it/12 p$ \IL2/cmr/m/n/12 zna-èí, ¾e po-u-¾í-vá-me za bá-zi s-polarizované r
 e-spek-ti-ve p-polarizované
  []
 
-[6]) [7]
+[7]) [8]
 \openout2 = `anizotrop.aux'.
 
  (./anizotrop.tex
 Kapitola 2.
-
-LaTeX Warning: Reference `Nyvlt' on page 8 undefined on input line 36.
-
-[8
+[9
 
 
 
-] [9] [10]) [11]
+] [10] [11]) [12]
 \openout2 = `expmetody.aux'.
 
  (./expmetody.tex
 Kapitola 3.
-
-LaTeX Warning: Reference `Sch\IeC {\'e}ma rotuj\IeC {\'\i }c\IeC {\'\i } polari
-z\IeC {\'a}tor' on page 12 undefined on input line 5.
-
 File: img/TPEPhoto.eps Graphic file (type eps)
-<img/TPEPhoto.eps> [12
+<img/TPEPhoto.eps> [13
 
 
 
 ]
+File: img/usb4openbench.eps Graphic file (type eps)
+ <img/usb4openbench.eps>
+Overfull \hbox (80.27629pt too wide) in paragraph at lines 58--59
+ [] 
+ []
 
-LaTeX Warning: Reference `USB2000+ schema' on page 13 undefined on input line 4
-8.
-
-[13]
-
-LaTeX Warning: Reference `TPE install' on page 14 undefined on input line 55.
-
-
-Overfull \hbox (14.86533pt too wide) in paragraph at lines 55--56
+[14] [15]
+Overfull \hbox (14.86533pt too wide) in paragraph at lines 69--70
 []\IL2/cmr/m/n/12 Následnì je po-tøe-ba na-sta-vit prv-ní po-la-ri-zá-tor tak a
 bychom zís-ka-li p-polarizované
  []
 
 
-Overfull \hbox (0.33493pt too wide) in paragraph at lines 65--66
+Overfull \hbox (0.33493pt too wide) in paragraph at lines 79--80
 []\IL2/cmr/m/n/12 Pro fi-to-vá-ní pøe-de-psa-né zá-vis-los-ti ([][][][]) po-u-¾
 í-vá-me Kra-me-ri-o-vu me-to-du. Vzhle-
  []
@@ -693,29 +676,53 @@ File: TPE2.eps Graphic file (type eps)
 
 <TPE2.eps>) (./grafy/TPE3.tex
 File: TPE3.eps Graphic file (type eps)
- <TPE3.eps>)
-
-LaTeX Warning: Reference `Schema modul' on page 14 undefined on input line 97.
-
-
-Overfull \hbox (88.483pt too wide) in alignment at lines 100--108
+ <TPE3.eps>) [16] [17] [18]
+Overfull \hbox (88.483pt too wide) in alignment at lines 114--122
  [][][] []
  []
 
-[14] [15] [16]
-
-LaTeX Warning: Reference `Nyvlt' on page 17 undefined on input line 109.
-
-[17]
-
-LaTeX Warning: Reference `4-loop' on page 18 undefined on input line 154.
-
-) [18]
+[19]) [20]
 \openout2 = `vzorky.aux'.
 
  (./vzorky.tex
 Kapitola 4.
-) [19
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+) [21
 
 
 
@@ -736,14 +743,14 @@ File: CoFeSi1.eps Graphic file (type eps)
  <CoFeSi1.eps>)
 (./grafy/CoF-RT-Al100.tex
 File: CoF-RT-Al100.eps Graphic file (type eps)
- <CoF-RT-Al100.eps>)) [20
+ <CoF-RT-Al100.eps>)) [22
 
 
 
-] [21] [22] [23]
+] [23] [24] [25]
 \openout2 = `zaver.aux'.
 
- (./zaver.tex) [24
+ (./zaver.tex) [26
 
 
 
@@ -751,37 +758,38 @@ File: CoF-RT-Al100.eps Graphic file (type eps)
 \openout2 = `literatura.aux'.
 
  (./literatura.tex
-
-LaTeX Warning: Empty `thebibliography' environment on input line 16.
-
-) [25
-
-
-
-] [26
+Underfull \hbox (badness 10000) in paragraph at lines 21--24
+[]\IL2/cmr/m/sc/12 ©míd, \IL2/cmr/m/n/12 Da-li-bor: \IL2/cmr/m/it/12 Li-ne-ár-n
+í al-ge-b-ra pro fy-zi-ky.
+ []
 
 
-] [27
+Overfull \hbox (35.77625pt too wide) in paragraph at lines 21--24
+\IL2/cmr/m/n/12 http://www.karlin.mff.cuni.cz/ smid/pmwiki/pmwiki.php?n=Main.LA
+proFLS1213 
+ []
+
+) [27
+
+
 
 ] [28
 
+
+] [29
+
+] [30
+
 ] (./prace.aux (./uvod.aux) (./polarizace.aux)
 (./anizotrop.aux) (./expmetody.aux) (./vzorky.aux) (./vysledky.aux)
-(./zaver.aux) (./literatura.aux))
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+(./zaver.aux) (./literatura.aux)) ) 
 Here is how much of TeX's memory you used:
- 6711 strings out of 494938
- 87427 string characters out of 1181144
- 172860 words of memory out of 3000000
- 9819 multiletter control sequences out of 15000+50000
- 17983 words of font info for 54 fonts, out of 3000000 for 9000
+ 6693 strings out of 494938
+ 87043 string characters out of 1181144
+ 169476 words of memory out of 3000000
+ 9801 multiletter control sequences out of 15000+50000
+ 20407 words of font info for 61 fonts, out of 3000000 for 9000
  24 hyphenation exceptions out of 8191
- 38i,13n,43p,1447b,385s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,13n,43p,1324b,385s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on prace.dvi (32 pages, 113120 bytes).
+Output written on prace.dvi (34 pages, 123724 bytes).
