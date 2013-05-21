@@ -1,0 +1,10 @@
+﻿\chapter{Vzorky}
+\sectoin{Kobaltové feritové tenké vrstvy}
+!!Taky PLD, prohodit!!!
+Ze zástupců oxidů jsme vybrali CoFe$_2$O$_4$ nanovrstvy. Tento materiál je díky jeho magnetickým vlastnostem často používán v mikrovlnných zařízeních a  pro magnetooptický zípis. Jejich hlavní předností je velká Curiova teplota, vysoká koercitiva a velká magnetická anizotropie. Naše vzorky byli depozitovány na substrát z amorfního taveného křemene. K ablaci vzorku byl použit Nd:YAG laser. Teplota při deposici vzorků byla 750 a 1100 $^\circ$C.
+
+\section{Ultratenké vrstvy La$_{2/3}$Sr$_{1/3}MnO_3}
+Další vzorek patří do skupiny vytvářené metodou pulsní laserové deposice (dále PLD). Tato metoda umožňuje vytcáření tenkých filmů o tloušťkách menších než 50 nm. Ve zkratce metoda funguje na principu kondenzace plasmy odpařované za pomoci krátkých laserovývh pulsů. V našem případě kondenzace probíhá na substrátu z SrTiO$_3$. Použité vzorky měli tloušťku 23,1 nm (PLD 186) a 80,8 nm (PLD202). 
+
+\section{CoFeSi}
+step 75, rep 300
