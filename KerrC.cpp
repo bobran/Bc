@@ -98,14 +98,14 @@ int main()
     // const int N= sizeof(Pr)/sizeof(Pr[0]);
     for (int i=0; i<=N-1; i++) {
         Pr[i].E=h/Pr[i].lambda;
-        Pr[i].y1=0.0002*power(Pr[i].E,3)+1e-4*power(Pr[i].E,2)+0.0013*Pr[i].E-0.0007;
-        Pr[i].sigma1=Pr[i].signal1*Pr[i].y1*0.5+zn1*Pr[i].otacky1/(1800.0);
+        Pr[i].y1=0.0415*power(Pr[i].E,3)-0.1602*power(Pr[i].E,2)+0.5519*Pr[i].E-0.3826;
+        Pr[i].sigma1=Pr[i].signal1*Pr[i].y1*0.5+zn1*Pr[i].otacky1/(18.0);
         vystup.precision(10);
         vystup.width(12);
         vystup<<Pr[i].E<<"\t"<<Pr[i].sigma1;
         if (elip) {
-            Pr[i].y2=0.0002*power(Pr[i].E,3)+1e-4*power(Pr[i].E,2)+0.0013*Pr[i].E-0.0007;
-            Pr[i].sigma2=Pr[i].signal2*Pr[i].y2*0.5+zn2*Pr[i].otacky2/(1800.0);
+            Pr[i].y2=0.0415*power(Pr[i].E,3)-0.1602*power(Pr[i].E,2)+0.5519*Pr[i].E-0.3826;
+            Pr[i].sigma2=Pr[i].signal2*Pr[i].y2*0.5+zn2*Pr[i].otacky2/(18.0);
             Pr[i].K=power(Pr[i].lambda,2);
             Pr[i].w=1-(93.0665*93.0665)/Pr[i].K;
             Pr[i].Q=1/(power(Pr[i].w,2)*Pr[i].lambda*sqrt(1+136.24/Pr[i].w));

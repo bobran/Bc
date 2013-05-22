@@ -29,7 +29,7 @@ V  případě, že $\delta=0$, tedy odebereme fázovou destičku, nám zcela vym
 Tato závislost předpokádá přesné určení vzájemné polohy polarizátorů. Tu však v praxi neznáme a proto využíváme toho, že platí $\theta_K(M)=-\theta_K(-M)$. kde $M$ značí magnetizaci. Měříme tedy závislosti pro dva opačné proudy procházející magnetem a výsledné nafitované konstanty od sebe odečteme a vydělíme dvěmi.
 
 \begin{figure}
-    %TODO přidat obrázek
+    \includegraphics[width=5in]{img/TPEschema.eps}
     \caption{Schéma metody téměř zkřížených polarizátorů.}
     \label{Schema TPE}
 \end{figure}
@@ -45,18 +45,17 @@ Fotografii celé aparatury můžete vidět na obrázku (\ref{TPE photo}).
 \end{center}
 \end{figure}
 
-Jako zdroj světla používáme lampu typ XXX od Ocean Optics. Obě najedou pokrývají spektrální rozsah od 250 nm do 1000 nm. Náš zdroj umožňuje použití obou trubic zároveň, avšak heliová trubice vytváří světlo o přibližně pětkrát větší intenzitě. Z toho důvodu je v oblasti malých vlnových délek znatelně vyšší šum. Dostatečná doba integrace signálu však tento šum téměř zcela vyruší.
-% lampa DH-2000-BAL OO
+Jako zdroj světla používáme lampu typ DH-2000-BAL od Ocean Optics. Tato lampa obsahuje deuteriovou a halogenovou trubici. Obě najedou pokrývají spektrální rozsah od 215 nm do 2500 nm, což dalece přesahuje rozsah detektoru. Intenzita světla je téměř stejná v celém spektru, avšak část oblasti malých vlnových délek je ztracena především v optických vláken. Z toho důvodu vzniká v této oblasti výrazně větší spektrální šum, avšak dostatečná doba integrace signálu tuto vadu téměř zcela vyruší.
 
 Polarizátory z CaF a křemene typu Rochon jsou umístěny do držáků s krokovými motorky.  Ty umožňují nastavení úhlu s přesností až $10^{-3}$ stupně. Jejich ovládání je zprostředkováno kontrolní jednotkou DC 500 od společnosti Owis. Ta umožňuje jejich manuální ovládání i kontrolu přes rozhraní GPIB.
 
 V našem uspořádání vytváří magnet polární magnetické pole. Aby nedocházelo ke zahřívání vzorku, je celý magnet chlazený studenou vodou. Při proudu 2 A vytváří magnet pole okolo 0.4 T, které bylo dostatečné k nasycení měřených vzorků. %TODO Hysterzní smyška
 
-K analýze světla používáme CCD spektrometr USB2000+ od Ocean Optics. Jeho schéma naleznete na obrázku (\ref{USB2000+ schema}), přičemž opis jednotlivých komponent naleznete v \cite{USB2000}. Rozsah spektrometru je přibližně od 200 do 900 nm s rozlišovací schopností (doplň číslo). Komunikace se spektrometrem je zprostředkována přes rozhraní USB protokolem VISA. 
+K analýze světla používáme CCD spektrometr USB2000+ od Ocean Optics. Jeho schéma naleznete na obrázku (\ref{USB2000+ schema}), přičemž opis jednotlivých komponent naleznete v \cite{USB2000}. Rozsah spektrometru je přibližně od 200 do 900 nm s rozlišovací schopností 0.3 nm (FWHM). Komunikace se spektrometrem je zprostředkována přes rozhraní USB protokolem VISA. 
 
 \begin{figure}
     \begin{center}
-    \includegraphics{img/usb4openbench.eps}
+    \includegraphics[width=5in]{img/usb4openbench.eps}
     \end{center}
     \caption{Schéma sektrometru USB2000+}
     \label{USB2000+ schema}
@@ -81,11 +80,11 @@ Pro fitování předepsané závislosti (\ref{I2}) používáme Krameriovu metod
 \begin{eqnarray}
 I(\alpha)=a_1+a_2\sin^2(\alpha)+a_3\sin(2\alpha)
 \end{eqnarray}
-kde $a_1$ odpovídá zmíněnému posunu, $a_2$ je úměrné reflektivitě vzroku, ale vzhledem ke ztrátám na optických prvcích a v optickém vlákně nemá přílišný význam a z $a_3$ dopočteme za pomoci vztahu $\frac{a_3}{a_2}=(\theta_K\cos\delta+\epsilon_K\sin\delta)$ příslušný elisometrický koeficient, jak už bylo zmíněno výše. Ukázku naměřený závislosti pro $\lambda=$ !!DOPLN!! nm s nafitovanými křivkami naleznete na obrázku (\ref{TPE0}).
+kde $a_1$ odpovídá zmíněnému posunu, $a_2$ je úměrné reflektivitě vzroku, ale vzhledem ke ztrátám na optických prvcích a v optickém vlákně nemá přílišný význam a z $a_3$ dopočteme za pomoci vztahu $\frac{a_3}{a_2}=(\theta_K\cos\delta+\epsilon_K\sin\delta)$ příslušný elisometrický koeficient, jak už bylo zmíněno výše. Ukázku naměřený závislosti pro $\lambda=520$ nm s nafitovanými křivkami naleznete na obrázku (\ref{TPE0}).
 
 \begin{figure}
 \input{grafy/TPE0}
-\caption{Naměřená závislost intenzity na úhlu natočení polarizátoru pro $\lambda =$}
+\caption{Naměřená závislost intenzity na úhlu natočení polarizátoru pro $\lambda =520$ nm}
 \label{TPE0}
 \end{figure}
 
@@ -110,14 +109,15 @@ kde $a_1$ odpovídá zmíněnému posunu, $a_2$ je úměrné reflektivitě vzrok
 
 \section{Modulační metoda}
 Druhá aparatura, kterou používáme je na obrázku (\ref{Schema modul}). Sestává z monochromátoru, polarizátoru, Faradayovy nulovací cely, Faradayovy modulační cely, fázové destičky, vzorku v magnetickém poli, analyzátoru zkříženým s polarizátorem a fotonásobiče s detektorem. 
-X %TODO Faradayovy cely
-Opět můžeme vyjádřit Jonesův vektor světla na detektoru
+Faradayova cela, jak již bylo zmíněno v úvodu, stáčí rovinu polarizovaného světla v závislosti na velikosti magnetického pole. To je řízeno proudem vcívkce, která je navinutá kolem skleněného válce, kterým prochází světlo.
+
+Jonesův vektor světla na konci aparatury získáme anoalogicky jako v předešlém případě.
 \begin{eqnarray}
 J=\begin{bmatrix}0&0\\0&1\end{bmatrix}
 \begin{bmatrix}r_{ss}&r_{sp}\\r_{ps}& r_{pp}\end{bmatrix}
 \begin{bmatrix}e^{i\frac{\delta}{2}}&0\\0&e^{-i\frac{\delta}{2}}\end{bmatrix}
 \begin{bmatrix}\cos(\beta_0\sin\omega_mt) & -\sin(\beta_0\sin\omega_mt) \\ \sin(\beta_0\sin\omega_mt)&\cos(\beta_0\sin\omega_mt)\end{bmatrix}
-\begin{bmatrix}\cos\eta&-\sin\eta\\\sin\eta&\cos\eta\end{bmatrix}
+\begin{bmatrix}\cos\eta&-\sin\eta\\\sin\eta&\cos\eta\end{bmatrix} \\
 \begin{bmatrix}\sin\alpha\\\cos\alpha\end{bmatrix} \\
 =\begin{bmatrix}0\\\cos\eta(r_{ps}e^{i\frac{\delta}{2}}\cos\tau+r_{pp}e^{-i\frac{\delta}{2}}\sin\tau)& -\sin\eta(r_{ps}e^{i\frac{\delta}{2}}\sin\tau-t_{pp}e^{-i\frac{\delta}{2}}\cos\tau)\end{bmatrix};\\ \tau = \beta_0\sin\omega_mt
 \end{eqnarray}
@@ -129,10 +129,12 @@ a oscilující komponenta při $\omega_m$ je
 \begin{eqnarray}
 I_{\omega_m}\approx|r_{pp}|^2\left[\eta+\mbox{Re}\left(\frac{r_{ps}}{r_{pp}}e^{i\delta}\right)\right]\tau
 \end{eqnarray}
-X %TODO Zmínit, že se využívá synchronní detekce - detekuje se pouze oscilující složka na frekvenci omega_m
+V našem případě používáme synchronní detekci. Velikost Kerrova jevu určujeme z oscilující složky úměrné $\omega_m$.
 
 \begin{figure}
-    %TODO Přidat obrázek
+    \begin{center}
+    \includegraphics[width=5in]{img/MO_setup.eps}
+    \end{center}
     \caption{Schéma modulační metody}
     \label{Schema modul}
 \end{figure}
@@ -159,7 +161,6 @@ Jako zroj elektrického proudu pro magnet používáme zdroj stejnosměrbého pr
 
 \section{Ovládací program Kerr2}
 V rámci náplně této práce byl zcela přeprogramován ovládaví program kvůli novým komponentám.
-%TODO zkrátit popis. (možná ještě trochu) + obrázek
 
 \subsection{Nastavení experimentu}
 Tento program má několik funkcí, které usnadňují nastavení experimetnu. Konkrétně umožňuje manuální kontrolu magnetu a monochromátoru s tím, že má přednastavených několik užitečných nastavení pro nastavování experimentu.
