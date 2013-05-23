@@ -1333,3 +1333,395 @@ correlation matrix of the fit parameters:
 a2              1.000 
 b2             -0.760  1.000 
 c2              0.010 -0.013  1.000 
+
+
+*******************************************************************************
+Thu May 23 13:57:33 2013
+
+
+FIT:    data read from "CoFeSi1-X.dat" u ($1/1000):2
+        format = x:z
+        #datapoints = 41
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.27394e+09       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.70546
+
+initial set of free parameter values
+
+a1              = 1
+b1              = 1
+c1              = 0.020961
+
+After 15 iterations the fit converged.
+final sum of squares of residuals : 5.3695e+06
+rel. change during last iteration : -1.04068e-15
+
+degrees of freedom    (FIT_NDF)                        : 38
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 375.902
+variance of residuals (reduced chisquare) = WSSR/ndf   : 141303
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a1              = -193.95          +/- 90.37        (46.59%)
+b1              = 51112.4          +/- 446.2        (0.8731%)
+c1              = -0.00143981      +/- 0.001709     (118.7%)
+
+
+correlation matrix of the fit parameters:
+
+               a1     b1     c1     
+a1              1.000 
+b1             -0.760  1.000 
+c1             -0.006  0.007  1.000 
+
+
+*******************************************************************************
+Thu May 23 13:57:33 2013
+
+
+FIT:    data read from "CoFeSi1-X.dat" u ($1/1000):3
+        format = x:z
+        #datapoints = 41
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.2726e+09        delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.705524
+
+initial set of free parameter values
+
+a2              = 1
+b2              = 1
+c2              = 0.032219
+
+After 17 iterations the fit converged.
+final sum of squares of residuals : 5.23547e+06
+rel. change during last iteration : -3.02408e-15
+
+degrees of freedom    (FIT_NDF)                        : 38
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 371.181
+variance of residuals (reduced chisquare) = WSSR/ndf   : 137776
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a2              = -186.556         +/- 89.24        (47.83%)
+b2              = 51076.7          +/- 440.6        (0.8627%)
+c2              = 0.00246366       +/- 0.001689     (68.54%)
+
+
+correlation matrix of the fit parameters:
+
+               a2     b2     c2     
+a2              1.000 
+b2             -0.760  1.000 
+c2              0.010 -0.013  1.000 
+
+
+*******************************************************************************
+Thu May 23 13:58:10 2013
+
+
+FIT:    data read from "CoFeSi1-X.dat" u ($1/1000):2
+        format = x:z
+        #datapoints = 41
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.96536e+07       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 19835.6
+
+initial set of free parameter values
+
+a1              = -193.95
+b1              = 51112.4
+c1              = 0.020961
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 5.3695e+06
+rel. change during last iteration : -1.94451e-12
+
+degrees of freedom    (FIT_NDF)                        : 38
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 375.902
+variance of residuals (reduced chisquare) = WSSR/ndf   : 141303
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a1              = -193.95          +/- 90.37        (46.59%)
+b1              = 51112.4          +/- 446.2        (0.8731%)
+c1              = -0.00143981      +/- 0.001709     (118.7%)
+
+
+correlation matrix of the fit parameters:
+
+               a1     b1     c1     
+a1              1.000 
+b1             -0.760  1.000 
+c1             -0.006  0.007  1.000 
+
+
+*******************************************************************************
+Thu May 23 13:58:10 2013
+
+
+FIT:    data read from "CoFeSi1-X.dat" u ($1/1000):3
+        format = x:z
+        #datapoints = 41
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.80229e+07       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 19821.7
+
+initial set of free parameter values
+
+a2              = -186.556
+b2              = 51076.7
+c2              = 0.032219
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 5.23547e+06
+rel. change during last iteration : -3.5122e-12
+
+degrees of freedom    (FIT_NDF)                        : 38
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 371.181
+variance of residuals (reduced chisquare) = WSSR/ndf   : 137776
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a2              = -186.556         +/- 89.24        (47.83%)
+b2              = 51076.7          +/- 440.6        (0.8627%)
+c2              = 0.00246366       +/- 0.001689     (68.54%)
+
+
+correlation matrix of the fit parameters:
+
+               a2     b2     c2     
+a2              1.000 
+b2             -0.760  1.000 
+c2              0.010 -0.013  1.000 
+
+
+*******************************************************************************
+Thu May 23 13:58:21 2013
+
+
+FIT:    data read from "CoFeSi1-X.dat" u ($1/1000):2
+        format = x:z
+        #datapoints = 41
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.96536e+07       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 19835.6
+
+initial set of free parameter values
+
+a1              = -193.95
+b1              = 51112.4
+c1              = 0.020961
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 5.3695e+06
+rel. change during last iteration : -1.94364e-12
+
+degrees of freedom    (FIT_NDF)                        : 38
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 375.902
+variance of residuals (reduced chisquare) = WSSR/ndf   : 141303
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a1              = -193.95          +/- 90.37        (46.59%)
+b1              = 51112.4          +/- 446.2        (0.8731%)
+c1              = -0.00143981      +/- 0.001709     (118.7%)
+
+
+correlation matrix of the fit parameters:
+
+               a1     b1     c1     
+a1              1.000 
+b1             -0.760  1.000 
+c1             -0.006  0.007  1.000 
+
+
+*******************************************************************************
+Thu May 23 13:58:21 2013
+
+
+FIT:    data read from "CoFeSi1-X.dat" u ($1/1000):3
+        format = x:z
+        #datapoints = 41
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.80229e+07       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 19821.7
+
+initial set of free parameter values
+
+a2              = -186.556
+b2              = 51076.7
+c2              = 0.032219
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 5.23547e+06
+rel. change during last iteration : -3.51078e-12
+
+degrees of freedom    (FIT_NDF)                        : 38
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 371.181
+variance of residuals (reduced chisquare) = WSSR/ndf   : 137776
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a2              = -186.556         +/- 89.24        (47.83%)
+b2              = 51076.7          +/- 440.6        (0.8627%)
+c2              = 0.00246366       +/- 0.001689     (68.54%)
+
+
+correlation matrix of the fit parameters:
+
+               a2     b2     c2     
+a2              1.000 
+b2             -0.760  1.000 
+c2              0.010 -0.013  1.000 
+
+
+*******************************************************************************
+Thu May 23 19:25:04 2013
+
+
+FIT:    data read from "CoFeSi1-X.dat" u ($1/1000):2
+        format = x:z
+        #datapoints = 41
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.27394e+09       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.70546
+
+initial set of free parameter values
+
+a1              = 1
+b1              = 1
+c1              = 0.020961
+
+After 15 iterations the fit converged.
+final sum of squares of residuals : 5.3695e+06
+rel. change during last iteration : -1.04068e-15
+
+degrees of freedom    (FIT_NDF)                        : 38
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 375.902
+variance of residuals (reduced chisquare) = WSSR/ndf   : 141303
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a1              = -193.95          +/- 90.37        (46.59%)
+b1              = 51112.4          +/- 446.2        (0.8731%)
+c1              = -0.00143981      +/- 0.001709     (118.7%)
+
+
+correlation matrix of the fit parameters:
+
+               a1     b1     c1     
+a1              1.000 
+b1             -0.760  1.000 
+c1             -0.006  0.007  1.000 
+
+
+*******************************************************************************
+Thu May 23 19:25:04 2013
+
+
+FIT:    data read from "CoFeSi1-X.dat" u ($1/1000):3
+        format = x:z
+        #datapoints = 41
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.2726e+09        delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.705524
+
+initial set of free parameter values
+
+a2              = 1
+b2              = 1
+c2              = 0.032219
+
+After 17 iterations the fit converged.
+final sum of squares of residuals : 5.23547e+06
+rel. change during last iteration : -3.02408e-15
+
+degrees of freedom    (FIT_NDF)                        : 38
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 371.181
+variance of residuals (reduced chisquare) = WSSR/ndf   : 137776
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a2              = -186.556         +/- 89.24        (47.83%)
+b2              = 51076.7          +/- 440.6        (0.8627%)
+c2              = 0.00246366       +/- 0.001689     (68.54%)
+
+
+correlation matrix of the fit parameters:
+
+               a2     b2     c2     
+a2              1.000 
+b2             -0.760  1.000 
+c2              0.010 -0.013  1.000 

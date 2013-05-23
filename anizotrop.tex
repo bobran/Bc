@@ -99,6 +99,13 @@ Jak bylo zmíněno, předpokládáme materiál tvořený $m$ vrstvami. Rozhraní
 \end{eqnarray}
 kde $z_n$ značí z-ovou souřadnici rozhraní $n$-té a $(n+1)$-ní vrstvy a $N_{zj}$ komponenty redukovaného vlnového vektoru.
 
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=5in]{img/border.eps}
+    \end{center}
+    \caption{Okrajové podmínky mezi vrstvami}
+\end{figure}
+
 Dále bez odvození uvádíme okrajové podmínky na rozhraní n-té a (n-1)-ní vrstvy. Jedná se o soustavu čtyř rovnic pro $E_x$, $E_y$, $B_y$ a $B_x$
 \begin{eqnarray}
 \sum^4_{j=1}E_{0j}^{(n-1)}(z_{n-1})\vec{e}_j^{(n-1)}\cdot\vec{i}_x &=& \sum^4_{j=1}E_{0j}^{(n)}(z_n)\vec{e}_j^{(n)}\cdot\vec{i}_x \mbox{exp}\left(i\frac{\omega}{c}N_{zj}^{(n)}t_n\right), \\
@@ -161,17 +168,5 @@ Pokud máme pouze jednu vrstvu na substrátu, můžeme se vyhnout řešení mati
 \end{eqnarray}
 kde $\beta_1=n_1\frac{\omega}{c}t_1=\sqrt{\varepsilon_1}\frac{E}{\hbar c}t_1$ a $r_{01}$ resp. $r_{12}$ jsou Fresnelovy reflexní koeficienty na prvním resp. druhém rozhraní. Pro kolmý dopad dosadíme
 \begin{eqnarray}
-r_{ij}=\frac{\sqrt{\varepsilon_j}-\sqrt{\varepsilon_i}}{\sqrt{\varepsilon_j}+\sqrt{\varepsilon_i}}
+r_{ij}=\frac{\sqrt{\varepsilon_j}-\sqrt{\varepsilon_i}}{\sqrt{\varepsilon_j}+\sqrt{\varepsilon_i}}.
 \end{eqnarray}
-Po zdlouhavých úpravách lze tuto rovnici upravit a separovat na výrazy
-\begin{eqnarray}
-\theta_K&=&K\frac{AC+BD}{C^2+D^2}\\
-\epsilon_K&=&K\frac{BC-AD}{C^2+D^2} \\
-K&=&\frac{(1-r_{01}^2)\varepsilon_2}{4\varepsilon_1} \\
-A&=&s+2r_{12}^2cs-r^2_{12}s+4\beta_1r_{12}c \\
-B&=&1-c+4\beta_1r_{12}s+r^2_{12}(c-c^2-s^2) \\
-C&=&r_{01}+r_{12}c+r_{01}^2r_{12}c+r_{01}2r_{12}^2c^2-r_{01}r_{12}^2s^2 \\
-D&=&r_{12}s+2r_{01}r_{12}^2cs+r_{01}^2r_{12}s \\
-c&=&\cos 2\beta_1;\, s=\sin 2\beta_1,
-\end{eqnarray}
-které jsou o něco použitelnější pro numerický výpočet.

@@ -111,7 +111,7 @@ int main()
             Pr[i].w=1-(93.0665*93.0665)/Pr[i].K;
             Pr[i].Q=1/(power(Pr[i].w,2)*Pr[i].lambda*sqrt(1+136.24/Pr[i].w));
             Pr[i].delta=(Pr[i].Q*169508.75986+2.884488929)*Pi/180.0;
-            Pr[i].epsilon=(-1)*((-1)*Pr[i].sigma1/sin(Pr[i].delta)+Pr[i].sigma2*(1/tan(Pr[i].delta)));
+            Pr[i].epsilon=(-1)*((-1)*Pr[i].sigma2/sin(Pr[i].delta)+Pr[i].sigma1*(1/tan(Pr[i].delta)));
             vystup.precision(10);
             vystup.width(12);
             vystup<<"\t"<<Pr[i].epsilon;

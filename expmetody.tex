@@ -57,7 +57,7 @@ K analýze světla používáme CCD spektrometr USB2000+ od Ocean Optics. Jeho s
     \begin{center}
     \includegraphics[width=5in]{img/usb4openbench.eps}
     \end{center}
-    \caption{Schéma sektrometru USB2000+}
+    \caption{Schéma sektrometru USB2000+ \cite{USB2000}}
     \label{USB2000+ schema}
 \end{figure}
 
@@ -139,8 +139,16 @@ V našem případě používáme synchronní detekci. Velikost Kerrova jevu urč
     \label{Schema modul}
 \end{figure}
 
-\section{Zařízení}
-Nová aparatrura obsahuje monochromátor TRIAX 550. Jedná se o mřížkový monochromátor s možností volby z různých mřížek. V našem případě máme na výběr 600, 900 a 1200 vrypů na mm. Parametry těchto mřížek jsou uvedeny v tabulce (\ref{TTriax}). Tento monochromátor lze ovládat za pomoci rozhraní GPIB. 
+\begin{figure}
+    \begin{center}
+    \includegraphics[width=5in]{img/Photomodul.eps}
+    \end{center}
+    \caption{Fotografie aparatury modulační metody}
+    \label{Photo modul}
+\end{figure}
+
+\subsection{Zařízení}
+Fotografie aparatury je vidět na obrázku (\ref{Photo modul}). Nová aparatrura obsahuje monochromátor TRIAX 550. Jedná se o mřížkový monochromátor s možností volby z různých mřížek. V našem případě máme na výběr 600, 900 a 1200 vrypů na mm. Parametry těchto mřížek jsou uvedeny v tabulce (\ref{TTriax}). Tento monochromátor lze ovládat za pomoci rozhraní GPIB. 
 \begin{table}
 $$
 \begin{array}{|c|c|c|}
@@ -157,16 +165,13 @@ $$
 
 K Určení velikosti signálu na fotonásobiči používáme mulimetr Keithley 2001. V našem případě v měříme napětí na rozsahu 1 V při kterém má přesnost $\pm(0.0045\%+0.0008)$V. Možnost automatického rozsahu nepoužíváme, protože při přepnutí rozsahu dochází ke skokům napětí. Komunikace je opět zprostředkována rozhraním GPIB.
 
-Jako zroj elektrického proudu pro magnet používáme zdroj stejnosměrbého proudu Kepco BOP. Standartně do magnetu pouštíme $\pm 2.5$A. Při této hodnotě je chyba proudu 0.1 mA. Při přepólování magnetu je nutné měnit proud postupně, jinak by mohlo dojít ke zkratu na zdroji. V našem případě používáme krok 0.05 A za 0.1 sekundy.
+Jako zroj elektrického proudu pro magnet používáme zdroj stejnosměrbého proudu Kepco BOP. Standartně do magnetu pouštíme $\pm 6.5$A. Při této hodnotě je chyba proudu 0.1 mA. Při přepólování magnetu je nutné měnit proud postupně, jinak by mohlo dojít ke zkratu na zdroji. V našem případě používáme krok 0.05 A za 0.1 sekundy.
 
-\section{Ovládací program Kerr2}
+\subsection{Ovládací program Kerr2}
 V rámci náplně této práce byl zcela přeprogramován ovládaví program kvůli novým komponentám.
 
-\subsection{Nastavení experimentu}
 Tento program má několik funkcí, které usnadňují nastavení experimetnu. Konkrétně umožňuje manuální kontrolu magnetu a monochromátoru s tím, že má přednastavených několik užitečných nastavení pro nastavování experimentu.
 
-\subsection{Měření spektra}
 Program umožňuje proměření spektra ve zvoleném rozahu s libovolným krokem. Dále umožňuje nastavení tolerance chyby měření, čekací doby po přepólování magnetu, počet měření jednotlivé vlnové délky a kalibračních koeficientů pro výpočet energie signálu. Po zahájení měření program nejprve nastaví na monochromátoru měřenou vlnovou délku a zapne proud do magnetu. Proud je přidáván postupně kvůli možnému zkratu na zroji při rychlém přepólování. Každé spektrum se měří opakovaně dle zadání uživatele, přičemž v celém prlběhu měření je kontrolováno, zda nebyl překročen rozsah. V takovém případě se měření pozastaví, aby umožnilo manuální otočení polarizátoru a měření pokračuje znovu od poslední vlnové délky. Měření stejně probíhá i pro opačnou magnetizaci, přičemž program umožňuje zadání počtu otáček potřebných pro navrácení do rozsahu po změně polarizace. Nakonec je pro danou vlnovou délku provedeno třetí měření s původní magnetizací a je zkontrolována odchylka od prvního měření. V případě příliš velké odchylky se měření opakuje. Po skončení měření jsou data uložena do expterního souboru spolu se všemi parametry měření.
 
-\subsection{Hysterzní smyčky}
 Program dále umožňuje měření hysterzních smyček a to dvěma způsoby. První postupně proměří při zadané vlnové délce ekvidistantě různé hodnoty proudu od I po -I a zpět. Druhá metoda, tzv. four loop, spočívá v postupném proměření hodnot vzdálených o $\Delta$I od hodnoty proudu I resp -I, přičemž tato vzálenost roste se zadaným krokem. V průběhu měření je postupně vykreslován graf.

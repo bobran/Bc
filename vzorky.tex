@@ -1,10 +1,112 @@
-\chapter{Vzorky}
+\chapter{Dosažené výsledky}
+V této kapitole se budeme zabývat měřením konkrétních vzorků, interpretací spekter a porovníní výsledů obou užitýcg metod. U obou použitých 
+metod měříme v polární geometrii, přičemž dopad na vzrorek je téměř kolmý. Magnetické pole generované magnetem je u modulační metody 1.2 T. Magnet 
+použitý při metodě zkřížených polarizátorů generuje pouze 0.4 T.
 
 \section{Ultratenké vrstvy La$_{2/3}$Sr$_{1/3}$MnO$_3$}
-První vzorek patří do skupiny vytvářené metodou pulsní laserové deposice (dále PLD). Tato metoda umožňuje vytváření tenkých filmů o tloušťkách menších než 50 nm. Ve zkratce metoda funguje na principu kondenzace plasmy odpařované za pomoci krátkých laserových pulsů. V našem případě kondenzace probíhá na substrátu z SrTiO$_3$. Použité vzorky měli tloušťku 23,1 nm (PLD 186) a 80,8 nm (PLD202). 
+První sada zkoumaných vzorků jsou tenké vrstvy La$_{2/3}$Sr$_{1/3}$MnO$_3$ (LSMO). Tento materiál je zkoumán předevšm kvůli jeko potenciálnímu použití v oblasti spintroniky. 
+Ta vyžaduje, aby materiál měl různou vodivost pro různě spiny elektronů. Další důležitý požadavek je jejich Curiova teplota alespoň nad pokojovou teplotou, z důvodu 
+použitelnosti v zařízeních pracujících právě při pokojové teplotě.
 
+Tyto vzorky byly vyrobeny metodou pulsní laserové deposice (dále PLD). Tato metoda umožňuje vytváření tenkých filmů o tloušťkách menších než 50 nm. Ve zkratce metoda funguje na principu kondenzace plasmy odpařované za pomoci krátkých laserových pulsů. 
+Tyto vzorky byli připraveny na substrátu z SrTiO$_3$ (STO) s krystalografickou orientací (1 0 0) 
+s přížkovou konstantou $a_{STO}=3.905$ \AA. Mřížková konstanta LSMO je $a_{LSMO}=3.889$ \AA, důsledkem čehož dochází k pnutí v tenké vrtvě, což má za následek slabší feromagnetické vlastnosti. Tloušťky zkoumaných vzorků byly 23,1 nm (PLD 186) a 80,8 nm (PLD202). 
+
+Výsledky měření těchto vzorků jsou na obrázcích (\ref{sPLD186}) a (\ref{sPLD202}).
+Na spektrech je vidět, že modulační metoda 
+dává pro energie nad 4.3 eV nepřesné výsledky. V této oblasti je vidět pokles obou ekeftů k nule, 
+což je způsobeno postupnou ztrátou signálu na detektoru. Ta je způsobena 
+snížením účinnosti fotonásobiče, která by mohla být odstraněna například použitím fotonásobiče s obálkou z křemenného skla, které má výrazně lepší propustnost v UV.
+
+Dále je znatelný posun celého spekra. To je následek horšího spektrálního rozlišení monochromátoru. K tomu se ještě projevuje chybovost krokového motorku, který 
+způsobuje další nepřesnost v určení vlnové délky světla.
+
+Až na výše uvedené vady je vidět velmi dobrá schoda spekter obout metod. Díky tomu mlžeme říct, že metoda zkžížených polarizátorů má stejně, jako modulční metoda, velmi 
+vysokou citlivost.
+
+Ze vztahu (\ref{teor kerr}) můžme určit teoretické spektrum těchto vzorků. Hodnoty pro LSMO byli určeny na 35 nm tenké vrstvě, která 
+se již dá skoro považovat za objemový materiál. Zdrojem byl \cite{PLD}. Parametry STO pak byli získány za pomoci elipsometrie. Výsledné porovnání 
+teoretických hodnot s výsledky metody zkřížených polarizátorů obou 
+vzorků je zobrazeno na obrázcích (\ref{sPLD186t}) a (\ref{sPLD202t}). Vidíme, že pro PLD186 jsme, až na velikost amplitudy, získaly tootožné hodnoty. 
+Tento rozdíl je dán tím, že materiálové konstanty byly určeny za nižší teploty. Díky shodě s teorií můžeme říct, že vzorek PLD186 má objemové vlastnosti LSMO. 
+U vzorku PLD202m již vidíme, že ke shodě nedošlo. Z toho vyplývá, že muselo dojít ke změně krystalografické struktury, která vedla ke změně magnetooptických vlastností.
+
+\begin{figure}
+\input{grafy/PLD186.tex}
+\caption{Spektrum polárního Kerrova jevu vzorku PLD186. Červené křivky odpovídají metodě zkřížených polarizátorl, modré pak modulační metodě.}
+\label{sPLD186}
+\end{figure}
+
+\begin{figure}
+\input{grafy/PLD202.tex}
+\caption{Spektrum polárního Kerrova jevu vzorku PLD202. Červené křivky odpovídají metodě zkřížených polarizátorl, modré pak modulační metodě.}
+\label{sPLD202}
+\end{figure}
+
+\begin{figure}
+\input{grafy/PLD186t.tex}
+\caption{Spektrum polárního Kerrova jevu vzorku PLD186. Červené křivky odpovídají metodě zkřížených polarizátorl, modré pak teoretickým hodnotám.}
+\label{sPLD186t}
+\end{figure}
+
+\begin{figure}
+\input{grafy/PLD202t.tex}
+\caption{Spektrum polárního Kerrova jevu vzorku PLD202. Červené křivky odpovídají metodě zkřížených polarizátorl, modré pak teoretickým hodnotám.}
+\label{sPLD202t}
+\end{figure}
 \section{Kobaltové feritové tenké vrstvy}
-Ze zástupců magnetických oxidů jsme vybrali nanovrstvy CoFe$_2$O$_4$. Tento materiál je díky jeho magnetickým vlastnostem často používán v mikrovlnných zařízeních a  pro magnetooptický zípis. Jejich hlavní předností je velká Curiova teplota, vysoká koercitiva a veliká magnetická anizotropie. Naše vzorky byli depozitovány metodou PLD na substrát z amorfního taveného křemene. K ablaci vzorku byl použit Nd:YAG laser. Teplota při deposici vzorků byla 750 (CoF-RT-A750) a 1100 $^\circ$C (CoF-RT-A1100). Tloušťka 110nm.
+Další velmy intenzivně studovanou skupinou materiálů jsou oxidy železa.
+Tyto materiály mají dobrý potenciální pro použití v mikrovlnných zařízeních a  pro magnetooptický zípis. 
+Jejich hlavní předností je vysoká Curiova teplota, vysoká koercitiva a veliká magnetická anizotropie. 
+
+Tenké vrstvy kobaltového feritu (CoFe$_2$O$_4$) jsou obzvláště zajímavé díky vysoké hustotě magnetického zápisu.
+Naše vzorky byli připravené metodou PLD na substrát z amorfního taveného křemene. K odpaření terčíku byly použity 5 ns dlouhé pulsy Nd:YAG laseru. 
+Deponování námi zkoumaných vzorků probáhala za pokojové teploty, následně byly vzorky zahřáty na 750 (CoF-RT-A750) resp. 1100 (CoF-RT-A1100) 
+stupňů Celsia. Tato teplota byla udržována po dobu dvou hodin, po kterých se vzorky nechali schladit opět na pokojovou teplotu. Tloušťka vrstev je 110 nm.
+
+Změřená spektra koblatových feritů jsou zobrazeny na obrázcích (\ref{sCoF-RT-A750}) a (\ref{sCoF-RT-A1100}). Z nich je dobře vidět, že vzorek je až do přibližně 2.7 eV značně transparentní, protože na spektru vznikl interferenčí obrazec pro tenkou vrstvu. Výsledky metod se v této oblasti liší, protože úhel dopadu se u metod liší, což má za následek zdánlivý rozdíl 
+v tloušťce vzorku. 
+
+Nad 2.5 eV je spektrum už typické pro ferity. Konkrétně má velmi podobné spektrum má i lithný a mědnatý ferit. \cite{ferity} 
+
+Dále je vidět vliv teploty, při které byli vzorky deponovány, na spektrum vzorku. Při vysokých teplotách totiž zřejmě dochází k materiálovým změnám, které mají za následek pokels magnetizace ve vzorku a tím pádem i magnetooptické odezvy.
+
+
+\begin{figure}
+\input{grafy/CoF-RT-A750.tex}
+\caption{Spektrum polárního Kerrova jevu vzorku CoF-RT-A750. Červené křivky odpovídají metodě zkřížených polarizátorl, modré pak modulační metodě.}
+\label{sCoF-RT-A750}
+\end{figure}
+
+\begin{figure}
+\input{grafy/CoF-RT-A1100.tex}
+\caption{Spektrum polárního Kerrova jevu vzorku CoF-RT-A1100. Červené křivky odpovídají metodě zkřížených polarizátorl, modré pak modulační metodě.}
+\label{sCoF-RT-A1100}
+\end{figure}
 
 \section{Heuslerovy slitiny}
-Jako poslední typ vzorků jsme použili zástupce z Heuslerovývh slitin. Námi zkoumané vzorky různou směsí koblatu, železa a křemíku. Substrát vzorku byl MgO. Na něm je 5 nm chrómu, 20 nm slitiny a navrchu 2 nm MgO. Tyto slitiny mají vynikající magnetické vlastnosti a velmi vysokou Curiovu teplotu. V současné době je velký zájem o výzkum těchto slitin, protože jejich vlastnosti nejsou příliš známy.  
+Jako poslední typ vzorků jsme použili zástupce z Heuslerovývh slitin. Tyto vzorky mají opět 
+skvělé vlastnosti pro použití v oplasti spintroniky.  Námi zkoumané vzorky různou směsí koblatu, 
+železa a křemíku. Ze všech zástupců zkoumaných Heuslerových slitin mají tyto výrazně nejvyšší Curiovu 
+teplotu ($\approx 1100$K). Pro srovnání slitiny Curiova teplota Fe$_2$MnSi se pohybuje pod pokojovou teplotou.
+
+Tyto materiály se vyrábí za pomoci nízkoteplotní molekulární svazkové epitaxie. Ve zkratce se při této metodě v oddělených komorách zahřívají jednotlivé koponenty. Jejich výpary vstupují do hlavní komory, ve které je velmi vysoké vaccum, kde následně kondenzují na substrátu. Rychlost růstu je pohybuje pod 3000 nm za hodinu, což umožňuje výrobu velmi tenkých filmů.
+
+Deponování našich vzorků probíhala na substrát z MgO. Na něm byla deponována nejprve 5 nm tenká vrstva chrómu, následně 20 nm slitiny a navrchu 2 nm MgO. Poměry kovů ve slitinách byli 7:5 (CoFeSi1) resp. 2:1 (CoFeSi2) v prospěch kobaltu.  
+
+Spektra vzorků Heuslerových slitin jsou na obrázcích (\ref{sCoFeSi1}) a (\ref{sCoFeSi2}). Rozdílná velikost amplitud efektů je daná použitím různých magnetů. 
+Magnet první z metod totiž nevytváří dostatečně velké pole pro nasycení vzorku. Porovnáním tvarů spekter však vidíme, že si výsledky obou metod odpovídají.
+
+Ze spekter je také dobře vidět, že vetší přítomnost železa proti kobaltu ve vzorku má za následek větší efekt.
+
+\begin{figure}
+\input{grafy/CoFeSi1.tex}
+\caption{Spektrum polárního Kerrova jevu vzorku CoFeSi1. Červené křivky odpovídají metodě zkřížených polarizátorl, modré pak modulační metodě.}
+\label{sCoFeSi1}
+\end{figure}
+
+\begin{figure}
+\input{grafy/CoFeSi2.tex}
+\caption{Spektrum polárního Kerrova jevu vzorku CoFeSi2. Červené křivky odpovídají metodě zkřížených polarizátorl, modré pak modulační metodě.}
+\label{sCoFeSi2}
+\end{figure}
