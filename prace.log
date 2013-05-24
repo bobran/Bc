@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=cslatex 2012.10.29)  24 MAY 2013 01:17
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=cslatex 2012.10.10)  24 MAY 2013 09:19
 entering extended mode
  %&-line parsing enabled.
 **prace.tex
@@ -585,7 +585,11 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
  (./uvod.tex
 File: img/polar.eps Graphic file (type eps)
- <img/polar.eps> [2
+ <img/polar.eps>
+
+LaTeX Warning: Citation `izolatory' on page 2 undefined on input line 35.
+
+[2
 
 
 ]) [3]
@@ -613,7 +617,7 @@ e-spek-ti-ve p-polarizované
 Kapitola 2.
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 58.
+(amsmath)                trying to recover with `aligned' on input line 59.
 
 [9
 
@@ -624,7 +628,7 @@ File: img/border.eps Graphic file (type eps)
  <img/border.eps> [11]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 147.
+(amsmath)                trying to recover with `aligned' on input line 148.
 
 [12]) [13]
 \openout2 = `expmetody.aux'.
@@ -641,13 +645,13 @@ File: img/TPEPhoto.eps Graphic file (type eps)
 ]
 File: img/usb4openbench.eps Graphic file (type eps)
  <img/usb4openbench.eps>
-Overfull \hbox (8.59872pt too wide) in paragraph at lines 69--76
+Overfull \hbox (8.59872pt too wide) in paragraph at lines 70--77
 []\IL2/cmr/m/n/12 Nejprve je po-tøe-ba na-sta-vit prv-ní po-la-ri-zá-tor tak ab
 ychom zís-ka-li p-polarizované
  []
 
 [15] [16]
-Overfull \hbox (0.33493pt too wide) in paragraph at lines 86--87
+Overfull \hbox (0.33493pt too wide) in paragraph at lines 92--93
 []\IL2/cmr/m/n/12 Pro fi-to-vá-ní pøe-de-psa-né zá-vis-los-ti ([][][][]) po-u-¾
 í-vá-me Kra-me-ri-o-vu me-to-du. Vzhle-
  []
@@ -664,7 +668,7 @@ File: TPE3.eps Graphic file (type eps)
  <TPE3.eps>) [17] [18] [19]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 134.
+(amsmath)                trying to recover with `aligned' on input line 140.
 
 File: img/MO_setup.eps Graphic file (type eps)
 <img/MO_setup.eps>
@@ -710,7 +714,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 6.
 
-(./grafy/PLD186.tex
+[23
+
+
+
+] (./grafy/PLD186.tex
 File: PLD186.eps Graphic file (type eps)
  <PLD186.eps>) (./grafy/PLD202.tex
 File: PLD202.eps Graphic file (type eps)
@@ -720,45 +728,44 @@ File: PLD186t.eps Graphic file (type eps)
  <PLD186t.eps>) (./grafy/PLD202t.tex
 File: PLD202t.eps Graphic file (type eps)
  <PLD202t.eps>)
-[23
-
-
-
-] [24] [25] (./grafy/CoF-RT-A750.tex
+[24] [25] (./grafy/CoF-RT-A750.tex
 File: CoF-RT-A750.eps Graphic file (type eps)
- <CoF-RT-A750.eps>)
-(./grafy/CoF-RT-A1100.tex
+ <CoF-RT-A750.eps>) (./grafy/CoF-RT-A1100.tex
 File: CoF-RT-A1100.eps Graphic file (type eps)
- <CoF-RT-A1100.eps>) [26] (./grafy/CoFeSi1.tex
+<CoF-RT-A1100.eps>) [26] [27] (./grafy/CoFeSi1.tex
 File: CoFeSi1.eps Graphic file (type eps)
-
-<CoFeSi1.eps>) (./grafy/CoFeSi2.tex
+ <CoFeSi1.eps>)
+(./grafy/CoFeSi2.tex
 File: CoFeSi2.eps Graphic file (type eps)
- <CoFeSi2.eps>)) [27] [28]
+ <CoFeSi2.eps>)) [28] [29]
 \openout2 = `zaver.aux'.
 
- (./zaver.tex)
-[29
+ (./zaver.tex) [30
 
 
 
 ]
 \openout2 = `literatura.aux'.
 
- (./literatura.tex) [30
+
+(./literatura.tex) [31
 
 
 
 ] (./prace.aux (./uvod.aux) (./polarizace.aux)
 (./anizotrop.aux) (./expmetody.aux) (./vzorky.aux) (./zaver.aux)
-(./literatura.aux)) ) 
+(./literatura.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6952 strings out of 494938
- 91193 string characters out of 1181144
- 171608 words of memory out of 3000000
- 10046 multiletter control sequences out of 15000+50000
+ 6959 strings out of 494938
+ 91256 string characters out of 1181144
+ 170899 words of memory out of 3000000
+ 10053 multiletter control sequences out of 15000+50000
  20407 words of font info for 61 fonts, out of 3000000 for 9000
  24 hyphenation exceptions out of 8191
  38i,19n,43p,1328b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on prace.dvi (34 pages, 154728 bytes).
+Output written on prace.dvi (35 pages, 160144 bytes).

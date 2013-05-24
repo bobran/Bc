@@ -33,7 +33,7 @@ Tuto vektorovou rovnici můžeme rozepsat pro složky vektorů za pomoci Levi-Ci
 \begin{eqnarray}
 \epsilon_{ijk}k_j\epsilon_{klm}k_lE_m+\frac{\omega^2}{c^2}\varepsilon_{ij}E_j =0
 \end{eqnarray}
-Postupnou úpravou, která je podrobněji popsána v \cite{Nyvlt} a volbou soustavy souřadné, kde BÚNO $N_x=0$ získáme maticovou rovnici
+Postupnou úpravou, která je podrobněji popsána v \cite{Nyvlt} a volbou soustavy souřadné, kde bez újmy na obecnosti $N_x=0$ získáme maticovou rovnici
 \begin{eqnarray}
 \begin{bmatrix}
 \varepsilon_{xx}-N_y^2-N_z^2& \varepsilon_{xy}& \varepsilon_{xz} \\
@@ -47,7 +47,8 @@ E_x\\ E_y\\ E_z
 \end{eqnarray}
 Pro získání jendoznačných řešení musíme fixovat další parametr. Z toho důvodu budeme dále předpokládat znalost komponenty $N_y$, kterou určuje úhel dopadu.
 
-Řešení rovnice (\ref{Matic1}) nebude triviální za předpokladu, že determinant matice soustavy bude nulový. Tak získáme charakteristickou rovnici soustavy pro vlastní honodty $N_z$
+Řešení rovnice (\ref{Matic1}) nebude triviální za předpokladu, že determinant matice soustavy bude nulový. 
+Tak získáme charakteristickou rovnici soustavy pro vlastní honodty $N_z$ \cite{Visnovsky}
 \begin{eqnarray}
 \begin{split}
 N_z^4\varepsilon_{zz}+N_z^3[N_y(\varepsilon_{yz}+\varepsilon_{yz})]\\
@@ -79,7 +80,7 @@ V případě, kdy se světlo šíří ve směru vektoru magnetizace víme díky 
 \\ i\varepsilon_{xy}& \varepsilon_{xx}&  0 \\ 0&0& \varepsilon_{zz}\end{bmatrix}
 \label{epsilon polar}
 \end{eqnarray}
-Díky tomu se rovnice (\ref{Matic1}) výrazně zjednodušší. Ve zkratce, pokud zvolíme $N_y=0$, což odpovídá kolmému dopadu, pak se charakteristická rovnice redukuje na
+Díky tomu se rovnice (\ref{Matic1}) výrazně zjednodušší. Ve zkratce, pokud zvolíme $N_y~=~0$, což odpovídá kolmému dopadu, pak se charakteristická rovnice redukuje na
 \begin{eqnarray}
 N_z^4-2\varepsilon_1N_z^2+\varepsilon_1^2-\varepsilon_2^2=0,
 \end{eqnarray}
@@ -166,7 +167,7 @@ r_{12} &r_{32} \\ -r_{14} & -r_{34}
 Analogické vztahy platí i pro transmisní koeficienty. Z obou pak můžeme dopočítat příslušné Kerrovy či Faradayovy koeficienty.
 
 \section{Jednoduchá vrstva}
-Pokud máme pouze jednu vrstvu na substrátu, můžeme se vyhnout řešení maticové rovnice a použít výraz
+Pokud máme pouze jednu vrstvu na substrátu, můžeme se vyhnout řešení maticové rovnice a použít vztah \cite{Mistrik}
 \begin{eqnarray}
 \Theta_K=\theta_K-i\epsilon_K=\frac{i\varepsilon_2(1-r^2_{01})\left[(1+r^2_{12}e^{-2i\beta_1})(1-e^{-2i\beta_1})+4i\beta_1e^{-2i\beta_1}\right]}{4\varepsilon_1(1+r_{01}+r_{12}e^{-2i\beta_1})},
 \label{teor kerr}

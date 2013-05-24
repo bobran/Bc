@@ -4,7 +4,7 @@
 \subsection{Teorie}
 Tato metoda umožňuje určení Kerrových koeficientů na základě znalost úměry intenzity na úhlu mezi polarizátory. Navíc obsahuje málo optických prvků díky čemuž je její celková konstrukce a seřízení jednoduché. 
 
-Schéma jádra celého experimentu je zobrazeno na obrázku (\ref{Schema TPE}). Ze zdroje je světlo vedeno optickým vláknem do aparatury. Svazek je nejprve kolimován spojnou čočkou. Následně prochází polarizátorem, který je otočen o úhel $\alpha$ od svislé osy, a fázovou destičkou s fázovým posuvem $\delta$. Po odrazu od vzorku prochází světlo analyzátorem, který je natočený o úhel $\pi/2$ od svilé osy. Výstupní světlo je zachyceno sběrnou čočkou do optického vlákna, které vede do spektrometru. Za pomoci Jonesova formalizmu můžeme spočítat Jonesův vektor světla dopadajícího na detektor.
+Schéma jádra celého experimentu je zobrazeno na obrázku \ref{Schema TPE}. Ze zdroje je světlo vedeno optickým vláknem do aparatury. Svazek je nejprve kolimován spojnou čočkou. Následně prochází polarizátorem, který je otočen o úhel $\alpha$ od svislé osy, a fázovou destičkou s fázovým posuvem $\delta$. Po odrazu od vzorku prochází světlo analyzátorem, který je natočený o úhel $\pi/2$ od svilé osy. Výstupní světlo je zachyceno sběrnou čočkou do optického vlákna, které vede do spektrometru. Za pomoci Jonesova formalizmu můžeme spočítat Jonesův vektor světla dopadajícího na detektor.
 \begin{eqnarray}
 J=r\begin{bmatrix}0&0\\0&1\end{bmatrix}\begin{bmatrix}1&-\Theta_K\\-\Theta_K&-1\end{bmatrix}\begin{bmatrix}e^{i\frac{\delta}{2}}&0\\0&e^{-i\frac{\delta}{2}}\end{bmatrix}\begin{bmatrix}\cos\alpha\\\sin\alpha\end{bmatrix}\\
 =r\begin{bmatrix}0\\-\Theta_Ke^{i\frac{\delta}{2}}\cos\alpha+e^{-i\frac{\delta}{2}}\sin\alpha\end{bmatrix},
@@ -37,7 +37,7 @@ Tato závislost předpokádá přesné určení vzájemné polohy polarizátorů
 \end{figure}
 
 \subsection{Použitá zařízení}
-Fotografii celé aparatury je vyobrazena na obrázku (\ref{TPE photo}).
+Fotografii celé aparatury je vyobrazena na obrázku \ref{TPE photo}.
 
 \begin{figure}
 \begin{center}
@@ -53,7 +53,8 @@ Polarizátory z CaF a křemene typu Rochon jsou umístěny do držáků s krokov
 
 V našem uspořádání vytváří magnet polární magnetické pole. Aby nedocházelo ke zahřívání vzorku, je celý magnet chlazený studenou vodou. Při proudu 2 A vytváří magnet pole okolo 0.4 T, které bylo dostatečné k nasycení měřených vzorků. %TODO Hysterzní smyška
 
-K analýze světla používáme CCD spektrometr USB2000+ od Ocean Optics. Jeho schéma naleznete na obrázku (\ref{USB2000+ schema}), přičemž popis jednotlivých komponent naleznete v \cite{USB2000}. Rozsah spektrometru je přibližně od 200 do 900 nm s rozlišovací schopností 0.3 nm (FWHM). Komunikace se spektrometrem je zprostředkována přes rozhraní USB protokolem VISA. 
+K analýze světla používáme CCD spektrometr USB2000+ od Ocean Optics. Jeho schéma je zobrazeno na obrázku  \ref{USB2000+ schema}. 
+Rozsah spektrometru je přibližně od 200 do 900 nm s rozlišovací schopností 0.3 nm (FWHM). Komunikace se spektrometrem je zprostředkována přes rozhraní USB protokolem VISA. 
 
 \begin{figure}
     \begin{center}
@@ -81,17 +82,22 @@ Aby nebylo nutné nastavovat aparaturu před každým měřením, jsou natočen�
 
 
 \subsubsection{Měření}
-Na začátku měření zadáme rozsah úhlu, které budeme měřit, krok, četnost měření spekter pro jednotlivé úhly a proud v magnet. Tyto údaje mají velký vliv na úroveň šumu spektra a na dobu měření. Spektra při různých hodnotách jsou znázorněna na obrázcích (\ref{TPE1}) až (\ref{TPE3}) spektra při změnách těchto parametrů. Při našem nastavení stačí pro hrubý odhad spektra okolo 40 měření při četnosti 100. Takové měření trvá několik málo minut. Pokud však chceme minimální šum, měříme v rozahu od -40 do 40 stupňů s krokem 0.5 stupně a četnosti 500. Toto měření již trvá okolo 40 minut, ale jak je vidět na spektrech, výsledky jsou výrazně hladší.
+Na začátku měření zadáme rozsah úhlu, které budeme měřit, krok, četnost měření spekter pro jednotlivé úhly a proud v magnet. 
+Tyto údaje mají velký vliv na úroveň šumu spektra a na dobu měření. Spektra při různých hodnotách jsou znázorněna na obrázcích 
+\ref{TPE1} až \ref{TPE3} spektra při změnách těchto parametrů. Při našem nastavení stačí pro hrubý odhad spektra okolo 40 měření při četnosti 100. 
+Takové měření trvá několik málo minut. 
+Pro dosažení co nejmenšího šumu je vhodné volit co nejhustší měření v okolí úhlů $\pm 45$ stupňů, kde je velikost efektu největší. 
+V takovém případě se jako dostačující ukázalo měření 150 různých úhlů s četností 400, která trvá okolo 25 minut.
 
 Pro fitování předepsané závislosti (\ref{I2}) používáme Krameriovu metodu. Vzhledem k posunu nulové intenzity na detektoru je konečná fitovaná závislost
 \begin{eqnarray}
 I(\alpha)=a_1+a_2\sin^2(\alpha)+a_3\sin(2\alpha)
 \end{eqnarray}
-kde $a_1$ odpovídá zmíněnému posunu, $a_2$ je úměrné reflektivitě vzroku, ale vzhledem ke ztrátám na optických prvcích nemá přílišný význam a z $a_3$ dopočteme za pomoci vztahu $\frac{a_3}{a_2}=(\theta_K\cos\delta+\epsilon_K\sin\delta)$ příslušný elipsometrický koeficient, jak už bylo zmíněno výše. Ukázku naměřený závislosti pro $\lambda=520$ nm s nafitovanými křivkami naleznete na obrázku (\ref{TPE0}).
+kde $a_1$ odpovídá zmíněnému posunu, $a_2$ je úměrné reflektivitě vzroku, ale vzhledem ke ztrátám na optických prvcích nemá přílišný význam a z $a_3$ dopočteme za pomoci vztahu $\frac{a_3}{a_2}=(\theta_K\cos\delta+\epsilon_K\sin\delta)$ příslušný elipsometrický koeficient, jak už bylo zmíněno výše. Ukázku naměřený závislosti pro $\lambda=520$ nm s nafitovanými křivkami naleznete na obrázku \ref{TPE0}.
 
 \begin{figure}
 \input{grafy/TPE0}
-\caption{Naměřená závislost intenzity na úhlu natočení polarizátoru pro $\lambda =520$ nm}
+\caption{Naměřená závislost intenzity na úhlu natočení polarizátoru pro $\lambda~=~520$ nm}
 \label{TPE0}
 \end{figure}
 
@@ -117,7 +123,7 @@ kde $a_1$ odpovídá zmíněnému posunu, $a_2$ je úměrné reflektivitě vzrok
 \section{Modulační metoda}
 Tato metoda je velmi často používaná kvůli její vysoké citlivosti. Značnou nevýhodou však je výrazně větší složitost celé aparatury, z čehož plyne těžší seřízení, a potřeba časté kalibrace. Za zmínku také stojí výrazně delší doba měření jednoho spektra.
 
-Schéma aparatury je nakresleno na obrázku (\ref{Schema modul}). Sestává z monochromátoru, polarizátoru, Faradayovy nulovací cely, Faradayovy modulační cely, fázové destičky, vzorku v magnetickém poli, analyzátoru zkříženým s polarizátorem a fotonásobiče s detektorem. 
+Schéma aparatury je nakresleno na obrázku \ref{Schema modul}. Optická soustava sestává z monochromátoru, polarizátoru, Faradayovy nulovací cely, Faradayovy modulační cely, fázové destičky, vzorku v magnetickém poli, analyzátoru zkříženým s polarizátorem a fotonásobiče. 
 Faradayova cela, jak již bylo zmíněno v úvodu, stáčí rovinu polarizovaného světla v závislosti na velikosti magnetického pole. To je řízeno proudem v cívce, která je navinutá kolem skleněného válce, kterým prochází světlo.
 
 Jonesův vektor světla na konci aparatury získáme anoalogicky jako v předešlém případě.
@@ -147,7 +153,7 @@ V našem případě používáme synchronní detekci. Velikost Kerrova jevu urč
     \begin{center}
     \includegraphics[width=5in]{img/MO_setup.eps}
     \end{center}
-    \caption{Schéma modulační metody}
+    \caption{Schéma experimentálního uspořádání využívající modulační metody.}
     \label{Schema modul}
 \end{figure}
 
@@ -160,7 +166,7 @@ V našem případě používáme synchronní detekci. Velikost Kerrova jevu urč
 \end{figure}
 
 \subsection{Zařízení}
-Fotografie aparatury je vidět na obrázku (\ref{Photo modul}). Nová aparatrura obsahuje monochromátor TRIAX 550. Jedná se o mřížkový monochromátor s možností volby z různých mřížek. V našem případě máme na výběr 600, 900 a 1200 vrypů na mm. Parametry těchto mřížek jsou uvedeny v tabulce (\ref{TTriax}). Tento monochromátor lze ovládat za pomoci rozhraní GPIB. 
+Fotografie aparatury je vidět na obrázku \ref{Photo modul}. Nová aparatrura obsahuje monochromátor TRIAX 550. Jedná se o mřížkový monochromátor s možností volby z různých mřížek. V našem případě máme na výběr 600, 900 a 1200 vrypů na mm. Parametry těchto mřížek jsou uvedeny v tabulce \ref{TTriax}. Tento monochromátor lze ovládat za pomoci rozhraní GPIB. 
 \begin{table}
 $$
 \begin{array}{|c|c|c|}
